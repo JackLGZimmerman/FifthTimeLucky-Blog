@@ -1,5 +1,4 @@
 <script>
-	import { min } from 'drizzle-orm';
 	import { AngleDownOutline } from 'flowbite-svelte-icons';
 	let showReadingStats = $state(false);
 	const readingStats = {

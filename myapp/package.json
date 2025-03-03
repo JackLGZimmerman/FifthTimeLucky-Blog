@@ -11,10 +11,7 @@
 		"check": "svelte-kit sync && svelte-check --tsconfig ./tsconfig.json",
 		"check:watch": "svelte-kit sync && svelte-check --tsconfig ./tsconfig.json --watch",
 		"format": "prettier --write .",
-		"lint": "prettier --check . && eslint .",
-		"db:push": "drizzle-kit push",
-		"db:migrate": "drizzle-kit migrate",
-		"db:studio": "drizzle-kit studio"
+		"lint": "prettier --check . && eslint ."
 	},
 	"devDependencies": {
 		"@eslint/compat": "^1.2.5",
@@ -48,13 +45,10 @@
 		"@oslojs/crypto": "^1.0.1",
 		"@oslojs/encoding": "^1.1.0",
 		"bcrypt": "^5.1.1",
-		"drizzle-orm": "^0.38.4",
 		"flowbite-svelte": "^0.47.4",
 		"mongoose": "^8.10.1",
-		"mysql2": "^3.12.0",
 		"redis": "^4.7.0",
 		"svelte-portal": "^2.2.1",
-		"tippy.js": "^6.3.7",
 		"zod": "^3.24.2"
 	}
 }

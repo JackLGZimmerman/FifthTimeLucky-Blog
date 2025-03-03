@@ -1,0 +1,446 @@
+<Note
+            text="This draft is intended for anyone thats trying to enter into the world of amateur League of Legends competions and wants to develop a solid base of understanding for drafting theory"
+            type="general"
+        />
+        <hr />
+        <Title
+            level={1}
+            text="Introduction"
+            content={
+                <>
+                    <Text>Lets start off with a question!</Text>
+                    <Note
+                        text="Have you ever finished a game and doubted your draft as a player or a coach?"
+                        type="question"
+                    />
+                    <Text>
+                        If you have, this is what I hope to solve. I'll provide the basics of drafting so you can finish
+                        your games without doubting the direction of your draft, or at least be clear on what you need
+                        to improve.
+                    </Text>
+                    <Text>
+                        Drafting is the process of selecting the champions you want to pick and ban following the{' '}
+                        <A
+                            text="tournament draft"
+                            link="https://leagueoflegends.fandom.com/wiki/Team_drafting#Draft_types"
+                        />
+                        , rules. Each draft has four phases, each pick / ban takes 30 seconds and a final preparation
+                        phase of 60 seconds, a maximum of 21 minutes:
+                    </Text>
+                    <hr />
+                    <SectionedContainer sizes={[55, 45]} align={['center', 'center']} height={250}>
+                        <Image
+                            src="/path-to-image.jpg"
+                            alt="Draft Phase Example"
+                            caption="Example of the selection order during a draft in League of Legends"
+                            figureNumber={1}
+                        />
+                        <List
+                            items={[
+                                ['Ban Phase 1', '6 Bans, 3 for red & blue-side'],
+                                ['Pick Phase 1', '6 Picks, 3 for red & blue-side'],
+                                ['Ban Phase 2', '4 Bans, 2 for red & blue-side'],
+                                ['Pick Phase 2', '4 Picks, 2 for red & blue-side'],
+                                ['Preparation Phase', 'To set up runes, summoner spells, and lanes'],
+                            ]}
+                            ordered={true}
+                        />
+                    </SectionedContainer>
+                </>
+            }
+        />
+
+        <Title
+            level={1}
+            text="Core Champion Types"
+            content={
+                <>
+                    <Text>
+                        There are 3 core champion types in the game, and each draft is a product of the champion types
+                        that were drafted, such as:
+                    </Text>
+                    <List
+                        items={[
+                            [
+                                <A text="Engage" link="" />,
+                                <>
+                                    Champions that want to fight with minimal conditions - <i>Fight Now</i>
+                                </>,
+                            ],
+                            [
+                                <A text="Control" link="" />,
+                                <>
+                                    Champions that want to fight under specific conditions - <i>Fight Here</i>
+                                </>,
+                            ],
+                            [
+                                <A text="Scaling" link="" />,
+                                <>
+                                    Champions that want to delay their fights until they are stronger -{' '}
+                                    <i>Fight Later</i>
+                                </>,
+                            ],
+                        ]}
+                        ordered={false}
+                    />
+                    <Text>Jack of all Trades, Master of None. Whats the equivalent for drafting?</Text>
+                    <Text>
+                        The most average and generic draft in league is the <A text="Front-to-Back" link="" /> draft. It
+                        has elements of each draft type, avoiding glaring weaknesses and providing the bare minimum to
+                        maintain some control at all points in the game. This makes it the{' '}
+                        <strong>best entry level draft!</strong>
+                    </Text>
+                    <hr />
+                    <SectionedContainer sizes={[60, 40]} align={['center', 'center']} height={200}>
+                        <div className="flex flex-col space-y-4">
+                            <Text>The pattern for front-to-back drafts is: </Text>
+                            <List
+                                items={[
+                                    ['Engage', 'Top / Jungle'],
+                                    ['Control', 'Middle / Support'],
+                                    ['Scaling', 'Bottom'],
+                                ]}
+                                ordered={false}
+                            />
+                            <Text>
+                                Top, Jungle, and Support provide front-line (tanky). With support playing a protective
+                                role to the hyper-carry AD
+                            </Text>
+                        </div>
+                        <div className="grid h-full overflow-hidden">
+                            <ExampleDraft
+                                draft={[
+                                    { name: 'Ornn', role: 'Top' },
+                                    { name: 'JarvanIV', role: 'Jungle' },
+                                    { name: 'Azir', role: 'Middle' },
+                                    { name: 'KogMaw', role: 'Bottom' },
+                                    { name: 'Lulu', role: 'Support' },
+                                ]}
+                            />
+                            <ExampleDraft
+                                draft={[
+                                    { name: 'Sylas', role: 'Top' },
+                                    { name: 'LeeSin', role: 'Jungle' },
+                                    { name: 'Veigar', role: 'Middle' },
+                                    { name: 'Aphelios', role: 'Bottom' },
+                                    { name: 'TahmKench', role: 'Support' },
+                                ]}
+                            />
+                            <ExampleDraft
+                                draft={[
+                                    { name: 'Zac', role: 'Top' },
+                                    { name: 'Gragas', role: 'Jungle' },
+                                    { name: 'Azir', role: 'Middle' },
+                                    { name: 'MissFortune', role: 'Bottom' },
+                                    { name: 'Braum', role: 'Support' },
+                                ]}
+                            />
+                        </div>
+                    </SectionedContainer>
+                    <hr />
+                    <Text>
+                        The above are example of drafts in the Fnatic vs. G2 Esports / LEC 2020 Spring Playoffs,{' '}
+                        <strong>over 66%</strong> of the drafts played in their match could be classified as
+                        front-to-back, its incredibly popular.
+                    </Text>
+                    <div className="flex flex-col gap-4">
+                        <VideoContent
+                            url="https://www.youtube.com/watch?v=jkhmSQ2oDvk"
+                            publishDate="2023-12-01"
+                            caption="Unique take of a front-to-back composition, using Sylas in Top-lane to take advantage of strong ultimates"
+                            tags={[
+                                { name: 'Front-to-Back Ex.', color: 'bg-blue-100 text-blue-800' },
+                                { name: 'Pro', color: 'bg-green-100 text-green-800' },
+                                { name: 'Competitive', color: 'bg-purple-100 text-purple-800' },
+                            ]}
+                        />
+                        <VideoContent
+                            url="https://www.youtube.com/watch?v=NqFnODvK7yI"
+                            publishDate="2023-12-01"
+                            tags={[
+                                { name: 'Front-to-Back Ex.', color: 'bg-blue-100 text-blue-800' },
+                                { name: 'Pro', color: 'bg-green-100 text-green-800' },
+                                { name: 'Competitive', color: 'bg-purple-100 text-purple-800' },
+                            ]}
+                        />
+                        <VideoContent
+                            url="https://www.youtube.com/watch?v=uEzovIoqowE"
+                            publishDate="2023-12-01"
+                            caption="A front-to-back composition with less scaling on the ADC, focusing on ranged poke, control, and burst"
+                            tags={[
+                                { name: 'Front-to-Back Ex.', color: 'bg-blue-100 text-blue-800' },
+                                { name: 'Pro', color: 'bg-green-100 text-green-800' },
+                                { name: 'Competitive', color: 'bg-purple-100 text-purple-800' },
+                            ]}
+                        />
+                    </div>
+
+                    <Text>
+                        Once you're comfortable with general drafts you can begin experimenting with new ones like{' '}
+                        <strong>1-3-1 Split-Push</strong>, <strong>Protect the President</strong>, <strong>Poke</strong>
+                        , <strong>Pick</strong>, <strong>Dive</strong>, etc
+                    </Text>
+                </>
+            }
+        />
+
+        <Title
+            level={2}
+            text="Choosing your Champions"
+            content={
+                <>
+                    <Text>
+                        Before encountering a team, each role needs to understand what they should be practicing. While
+                        grinding your <abbr className="no-underline" title="One Trick Pony"><A text="OTP" link="" /></abbr> for the 500<sup>th</sup> time might feel rewarding for <abbr className="no-underline" title="League Points">LP</abbr>
+                        gains, the off-season is the perfect time to expand your champion pool with purpose.
+                    </Text>
+                    <Title level={3} text="Understanding the META" />
+                    <Text>
+                        <abbr className="no-underline" title="Most Effective Tactics Available">META</abbr> (Most Effective Tactics Available) represents the current strongest champions and
+                        strategies. It's important to understand both why these champions are strong and how they could
+                        fit into your compositions. The question of "What is META" is hottely debated.
+                    </Text>
+                    <Text>
+                        <strong>How</strong> can we be certain? <strong>Who</strong> can we trust to know this
+                        information? <strong>Where</strong> could we source this information?
+                    </Text>
+                    <Text>
+                        The most popular way to find this information is through <strong>tierlists</strong> and{' '}
+                        <strong>patch notes</strong>.
+                    </Text>
+                    <div className="grid grid-cols-3 gap-4">
+                        <VideoContent url="https://www.youtube.com/watch?v=V2MYKZKnzVw&t" isShort={true} />
+                        <VideoContent url="https://www.youtube.youtube.com/watch?v=Xj_TYizNaJo" isShort={true} />
+                        <VideoContent url="https://www.youtube.com/watch?v=vxi1PZk7SaI" isShort={true} />
+                    </div>
+                    <Text>
+                        As you use these sources, the higher level you become the less valuable you find these tools,
+                        because these methods are massively generalised, lack context, and clarity.
+                    </Text>
+                    <div className="grid gap-2">
+                        <VideoContent url="https://www.youtube.com/shorts/cKUvYhrA42U" isExtra={true} />
+                        <VideoContent url="https://www.youtube.com/shorts/WGMQgufuRY4" isExtra={true} />
+                        <VideoContent url="https://www.youtube.com/shorts/gzfS-f-UknA" isExtra={true} />
+                    </div>
+                    <Text>
+                        Below are the ways I've identified to judge the META under different contexts, for now we're
+                        going use an 80/20-split for identifying META.
+                    </Text>
+                    <List
+                        items={[
+                            [
+                                <HighlightBullet type="focus"><abbr className="no-underline" title="Solo Queue">SoloQ</abbr> <abbr className="no-underline" title="Win Rate">WR</abbr></HighlightBullet>,
+                                'Elo, One-Trick-Pony (OTP), Enemy Draft Theme, Dominance',
+                            ],
+                            [<span><abbr className="no-underline" title="Solo Queue">SoloQ</abbr> <abbr className="no-underline" title="Ban Rate">BR</abbr></span>, 'These champions create emotional responses in players'],
+                            [
+                                'Pro-play Presence',
+                                'Preferred based on factors like consistency, reliability, and flexibility',
+                            ],
+                            ['Tierlists / META by Authority', 'Opinions by people of authority'],
+                            [
+                                'Volatile Kits',
+                                'The nature of their kit forces them into the spotlight at a certain point',
+                            ],
+                            ['Combinations', 'Certain champions gain value when used with others'],
+                            ['Dominance', 'Not exceptionally strong, but has practically no reasonable counter'],
+                        ]}
+                        ordered={false}
+                    />
+                    <Title level={4} text="SoloQ WR" />
+                    <Text>
+                        SoloQ WR gives the best idea of what is a powerful champion, it certainly isn't the only factor
+                        and ideally we want to consider certain contexts like, Elo, OTPs, Enemy Draft, ect. Right now as
+                        of 19/12/2024 we're in patch 14.24, Warwick has gone through some <i>changes</i>.
+                    </Text>
+                    <div className="flex flex-col gap-4">
+                        <ChampionDiscussion
+                            name="Warwick"
+                            title="Buffs Disguised as Changes"
+                            roles={['Top', 'Jungle']}
+                            updates="In addition to getting slightly bigger, we're helping him have a smoother combat feel with his attacks. Additionally, we're changing the W to make it easier to cast as a scouting tool."
+                            buffs={[
+                                ['Base Stats', 'Base armor increased by 5'],
+                                ['Q - Jaws of the Beast', 'Healing increased by 10%'],
+                            ]}
+                            nerfs={[['W - Blood Hunt', 'Cooldown increased by 2 seconds at all ranks']]}
+                            neutral={[['Quality of life improvements', 'Basic attacks']]}
+                            patch="14.22"
+                            date="05/11/2024"
+                            patchUrl="https://www.leagueoflegends.com/en-gb/news/game-updates/patch-14-22-notes/"
+                        />
+                        <VideoContent
+                            url="https://www.youtube.com/watch?v=x1HVsbhARzY"
+                            publishDate="2024-12-18"
+                            caption="Content creator Midbeast showing abuse of the Warwick changes in Korea and achieving Rank 2 on the ladder"
+                            tags={[{ name: 'Review', color: 'bg-blue-100 text-blue-800' }]}
+                        />
+                    </div>
+
+                    <Text>
+                        Over the last 14 days Warwick shot further up the ladder reaching both{' '}
+                        <A text="Rank 1 in Top & Jungle" link="https://lolalytics.com/lol/tierlist/?lane=jungle" /> with
+                        win-rates of <ColoredText color="green">55.02%</ColoredText>
+                        {' and '}
+                        <ColoredText color="green">54.62%</ColoredText>. The response was complete dominance, and a
+                        champion hotfix in{' '}
+                        <A
+                            text="patch 14.24"
+                            link="https://www.leagueoflegends.com/en-gb/news/game-updates/patch-14-24-notes/"
+                        />
+                        . Warwick would likely had become a pick or ban in competative play, something easily predicted
+                        by his SoloQ WR. You can get access to this data through the following analytics sites, the most
+                        comprehensive being <A text="Lolalytics" link="https://lolalytics.com" />.
+                    </Text>
+                    <div className="flex flex-col gap-2">
+                        <ShortWebsiteContent url="https://u.gg" />
+                        <ShortWebsiteContent url="https://lolalytics.com/" />
+                        <ShortWebsiteContent url="https://www.op.gg/" />
+                    </div>
+                    <Text>From here we can view the champions with the highest WR but also:</Text>
+                    <List
+                        items={[
+                            ['Who counters them', ''],
+                            ['Who they work well with', ''],
+                            ['Which OTPs are the strongest', ''],
+                            ['Their WR changes between patches', ''],
+                        ]}
+                    />
+                    <Title level={3} text="Pro-play Presence" />
+                    <Text>
+                        Players are naturally drawn to professionals as a source of authority, if they think it's good
+                        then it <i>must</i> be good. <strong>This is incredibly wrong</strong>, but it works to our
+                        advantage since we have a good idea of what to expect to see in our games.
+                    </Text>
+                    <Text>
+                        Pro-players don't tend to dictate the META in-fact they follow the solutions provided by lower
+                        ranks (Gold+). High-level play is about execution of what is effective, lower-level play
+                        emphasises <i>creativity</i>. As a result professional META tends to lag behind the META curve,
+                        and allows us to craft our own META around these choices.
+                    </Text>
+                    <Text>
+                        We can identify these professional META champions by their <strong>presence</strong>, here are
+                        some guidelines:
+                        <List
+                            items={[
+                                [
+                                    'The closer to 100% the more contested they are, and more likely the professional scene considers them META',
+                                    '',
+                                ],
+                                ['Any champions below 50% presence are more niche than they are META', ''],
+                                ['Bans greater than Picks indicates true META power-picks', ''],
+                                ['Picks greater than Bans indicates generic pro-play comfort champions', ''],
+                            ]}
+                        />
+                    </Text>
+                    <Text>
+                        This information can be found at gol.gg which provides a comprehensive list of pro-play
+                        statistics.
+                    </Text>
+                    <ShortWebsiteContent url="https://gol.gg/champion/list/season-S15/split-Pre-Season/tournament-ALL/" />
+                    <StrengthsNWeaknesses
+                        strengths={[
+                            {
+                                name: 'Skarner',
+                                keyInfo: 'Rank 3 Presence (98%)',
+                                reason: [
+                                    ['Pick:Ban', '(11 / 38) 0.28'],
+                                    ['Win Rate', '82%'],
+                                ],
+                            },
+                            {
+                                name: 'Aurora',
+                                keyInfo: 'Rank 2 Presence (98%)',
+                                reason: [
+                                    ['Pick:Ban', '(17 / 32) 0.53'],
+                                    ['Win Rate', '53%'],
+                                ],
+                            },
+                            {
+                                name: 'Ashe',
+                                keyInfo: 'Rank 1 Presence (98%)',
+                                reason: [
+                                    ['Pick:Ban', '(22 / 27) 0.81'],
+                                    ['Win Rate', '41%'],
+                                ],
+                            },
+                        ]}
+                        weaknesses={[
+                            {
+                                name: 'KSante',
+                                keyInfo: 'Poor Performance',
+                                reason: [
+                                    ['Pick:Ban', '(23 / 13) 1.77'],
+                                    ['Win Rate', '39%'],
+                                ],
+                            },
+                            {
+                                name: 'Varus',
+                                keyInfo: 'Rank 1 Pick:Ban Ratio',
+                                reason: [
+                                    ['Pick:Ban', '(27 / 9) 3'],
+                                    ['Win Rate', '56%'],
+                                ],
+                            },
+                            {
+                                name: 'Sejuani',
+                                keyInfo: 'High Pick:Ban Ratio',
+                                reason: [
+                                    ['Pick:Ban', '(19 / 14) 1.34'],
+                                    ['Win Rate', '53%'],
+                                ],
+                            },
+                        ]}
+                    />
+                    <List
+                        items={[
+                            [<Text>Think of strengths as "Damn, thats pretty strong"</Text>, ''],
+                            [<Text>Think of weaknesses as "Im not sure what to pick here, lets go this"</Text>, ''],
+                        ]}
+                        ordered={false}
+                    />
+                    <ChampionXChampion
+                        champion1={{ name: 'Aatrox', role: 'Top' }}
+                        champion2={{ name: 'Ornn', role: 'Top' }}
+                        type="synergy"
+                        link=""
+                    />
+                    <Title level={3} text="Champion Pool" />
+                    <Text>
+                        Your champion pool needs to account for what we expect to see played against us (The META),
+                        which champions appear in pro-play, as well as the enemy team which we will cover next.{' '}
+                    </Text>
+                    <Text>Our champion pools need to fit the following characteristics:</Text>
+                    <List
+                        items={[
+                            ['9+ Champions', 'Enough such that each drafting type has access to 3 champions'],
+                            [
+                                'Flexible',
+                                'Ideally each champion can be played in multiple roles, and by other members of your team',
+                            ],
+                            [
+                                'Counter',
+                                'Your champion pool should counter the META, and champions present in pro-play',
+                            ],
+                        ]}
+                    />
+                </>
+            }
+        />
+
+        <Title
+            level={2}
+            text="Scouting the Enemy"
+            content={
+                <Quote
+                    quote="By failing to prepare, you are preparing to fail..."
+                    author="Reverend H.K. Williams"
+                    date="1919"
+                    link="https://quoteinvestigator.com/2018/07/08/plan/"
+                />
+            }
+        />
+        <Title level={2} text="Drafting Technique" />
+        <Title level={2} text="In-Game Strategy" />
+        <Title level={2} text="Identifying your Pressure" />
+        <Title level={2} text="Evaluating your Performance" content={<Text>Final section content goes here...</Text>} />
